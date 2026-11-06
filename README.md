@@ -45,6 +45,7 @@
   <!-- Quick Navigation Bar -->
   <p align="center">
     <b><a href="#-about-me">About Me</a></b> &nbsp;•&nbsp;
+    <b><a href="#-annual-contribution-trend--activity">Contribution Trend</a></b> &nbsp;•&nbsp;
     <b><a href="#-featured-projects--top-stars">Featured Projects</a></b> &nbsp;•&nbsp;
     <b><a href="#️-the-dev-toolkit">The Toolkit</a></b> &nbsp;•&nbsp;
     <b><a href="#-all-repositories--experiments">All Repos</a></b> &nbsp;•&nbsp;
@@ -60,21 +61,39 @@
 ```bash
 ╭─ hojjat@dev-workstation ~
 ╰─$ neofetch --profile "Hojjat Shafiee"
-```
 
-```yaml
-Title: Unity Game Developer & Systems Architect
-Location: Isfahan, Iran 📍
-Status: 🟢 Open to Work (Remote / Relocation)
-Core Focus: Procedural World Generation, Gameplay Architecture & AI Engine Tooling
-Key Stack: Unity (C# / ShaderLab), Python (FastAPI), ZeroC ICE, Model Context Protocol (MCP)
-Game Jams: GitHub Game Off 2025 Participant (Tidebreak)
-Philosophy: "Bridging procedural algorithms, engaging game mechanics, and autonomous agent tooling."
+─────────────────────────────────────────────────────────────────
+Role:        Unity Game Developer & Systems Architect
+Location:    Isfahan, Iran 📍
+Status:      Open to Work 🟢 (Remote / Relocation)
+Core Focus:  Procedural World Generation, Gameplay Architecture & AI Engine Tooling
+Key Stack:   Unity (C# / ShaderLab), Python (FastAPI), ZeroC ICE, MCP
+Game Jams:   GitHub Game Off 2025 Participant (Tidebreak)
+Philosophy:  "Bridging procedural algorithms, engaging game mechanics, and autonomous agent tooling."
+─────────────────────────────────────────────────────────────────
 ```
 
 - 🎮 **Game Engineering & Graphics:** Specializing in **Unity (2D/3D)**, algorithm-driven procedural mesh synthesis (mazes, terrain heightmaps), custom shaders, and responsive player movement systems.
 - 🤖 **Agentic Engineering & MCP:** Pioneering integrations for the **Model Context Protocol (MCP)**, connecting LLM agents (Claude, Cline, Qoder) directly into a live Unity Editor session to automate scene hierarchy management, prefab wiring, and script edits.
 - ⚡ **High-Throughput Backends & VoIP:** Architecting asynchronous REST APIs using **FastAPI** coupled with **ZeroC ICE RPC** protocols to control Mumble Murmur voice servers for low-latency in-game multiplayer communication.
+
+---
+
+### 📈 Annual Contribution Trend & Activity
+
+<div align="center">
+  <a href="https://github.com/hojjat-shafiee">
+    <img src="./assets/contributions.png" width="100%" alt="Annual Contribution Trend &amp; Commit Activity" />
+  </a>
+</div>
+
+<br/>
+
+<div align="center">
+  <a href="https://github.com/hojjat-shafiee">
+    <img src="https://github-readme-streak-stats.herokuapp.com/?user=hojjat-shafiee&theme=tokyonight&hide_border=true&background=0D1117" alt="GitHub Streak Stats" />
+  </a>
+</div>
 
 ---
 
