@@ -1,20 +1,38 @@
 <div align="center">
 
-  <!-- Dynamic Waving Header Banner -->
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,24,38,46&height=220&section=header&text=Hojjat%20Shafiee&fontSize=52&fontAlignY=36&animation=fadeIn&desc=Unity%20Game%20Developer%20%7C%20Game%20Designer%20%7C%20MCP%20Tooling&descAlignY=58&descAlign=50" width="100%" />
+  <!-- Dynamic Header Banner -->
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=1a1b26,24283b,414868,7aa2f7,bb9af7&height=230&section=header&text=Hojjat%20Shafiee&fontSize=52&fontAlignY=36&animation=fadeIn&desc=Unity%20Game%20Developer%20%7C%20Systems%20Architect%20%7C%20AI%20%26%20MCP%20Tooling&descAlignY=58&descAlign=50" width="100%" alt="Hojjat Shafiee Banner" />
 
   <!-- Animated Typing Tagline -->
   <a href="https://readme-typing-svg.demolab.com">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&width=620&lines=Unity+Game+Developer+%26+Designer;Procedural+Systems+%26+Algorithm-Driven+Worlds;Building+MCP+Integrations+for+Live+Game+Engines;FastAPI+Backends+%26+Real-time+VoIP+Systems" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=3000&pause=1000&color=7AA2F7&center=true&vCenter=true&width=650&lines=Unity+Game+Developer+%26+Systems+Architect;Procedural+Generation+%26+Algorithm-Driven+Worlds;Model+Context+Protocol+(MCP)+%26+AI+Engine+Tooling;Async+FastAPI+Backends+%26+Real-time+VoIP+Systems" alt="Typing Tagline" />
   </a>
 
   <br/><br/>
 
-  <!-- Status Badges -->
-  [![Profile Views](https://komarev.com/ghpvc/?username=hojjat-shafiee&label=PROFILE+VIEWS&style=flat-square&color=3382ed)](https://github.com/hojjat-shafiee)
-  [![Location](https://img.shields.io/badge/Location-Isfahan%2C%20Iran-00d26a?style=flat-square&logo=googlemaps&logoColor=white)](https://github.com/hojjat-shafiee)
-  [![itch.io](https://img.shields.io/badge/itch.io-Games-FA5C5C?style=flat-square&logo=itchdotio&logoColor=white)](https://hojjat-shafiee.itch.io)
-  [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/hojjat-shafiee/)
+  <!-- Quick Status Badges -->
+  [![Status](https://img.shields.io/badge/Status-🟢%20Open%20to%20Game%20Jams%20%26%20Collaborations-10B981?style=for-the-badge&logoColor=white)](https://github.com/hojjat-shafiee)
+  [![Profile Views](https://komarev.com/ghpvc/?username=hojjat-shafiee&label=PROFILE+VIEWS&style=for-the-badge&color=7aa2f7)](https://github.com/hojjat-shafiee)
+
+  <br/>
+
+  <!-- Social Badges -->
+  [![itch.io](https://img.shields.io/badge/itch.io-Games%20%26%20Demos-FA5C5C?style=for-the-badge&logo=itchdotio&logoColor=white)](https://hojjat-shafiee.itch.io)
+  [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/hojjat-shafiee/)
+  [![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/hojjat-shafiee)
+  [![Email](https://img.shields.io/badge/Email-Get%20in%20Touch-6D4AFF?style=for-the-badge&logo=protonmail&logoColor=white)](mailto:better_call_hojat@proton.me)
+
+  <br/><br/>
+
+  <!-- Fast Navigation Links -->
+  <p align="center">
+    <b><a href="#-about-me">About Me</a></b> &nbsp;•&nbsp;
+    <b><a href="#️-tech-stack--arsenal">Tech Stack</a></b> &nbsp;•&nbsp;
+    <b><a href="#-flagship-projects">Flagship Projects</a></b> &nbsp;•&nbsp;
+    <b><a href="#-all-public-repositories">All Projects</a></b> &nbsp;•&nbsp;
+    <b><a href="#-github-analytics">Stats</a></b> &nbsp;•&nbsp;
+    <b><a href="#-lets-connect">Connect</a></b>
+  </p>
 
 </div>
 
@@ -22,18 +40,24 @@
 
 ### 👨‍💻 About Me
 
-```yaml
-name: Hojjat Shafiee
-role: Unity Game Developer & Game Designer
-focus: Procedural Generation, Gameplay Systems & AI-Engine Integrations
-stack: [Unity, C#, Python, FastAPI, ShaderLab, MCP]
-motto: "Transforming procedural algorithms and intelligent tools into engaging gameplay."
+```bash
+╭─ hojjat@game-dev ~
+╰─$ neofetch --profile "Hojjat Shafiee"
 ```
 
-- 🕹️ **Game Development:** Specializing in Unity (2D/3D), gameplay mechanics, procedural world/dungeon generation, and custom editor tooling.
-- 🤖 **AI & MCP Tooling:** Pioneering **Model Context Protocol (MCP)** bridges that allow autonomous AI agents to interact directly with live Unity Editor scenes, game objects, and prefabs.
-- ⚡ **Backend & Networking:** Developing high-throughput async REST APIs in **FastAPI** and integrating low-latency VoIP systems (**Mumble**) into multiplayer game architectures.
-- 🏆 **Game Jams & Open Source:** Active participant in game jams (e.g., **GitHub Game Off 2025**) and open-source tooling.
+```yaml
+Role: Unity Game Developer & Systems Architect
+Location: Isfahan, Iran 📍
+Specialization: Procedural Systems, Gameplay Architecture, AI Engine Tooling
+Core Stack: Unity (C# / ShaderLab), Python (FastAPI), MCP, Linux & ZeroC ICE
+Current Focus: Building autonomous MCP agents that control live game engines
+Philosophy: "Algorithm-driven design meets seamless gameplay feel."
+```
+
+- 🎮 **Game Engineering:** Deep focus on 2D/3D game mechanics, procedural dungeon/maze generation, shaders, runtime mesh synthesis, and responsive player controllers in **Unity**.
+- 🤖 **Agentic & MCP Tooling:** Pioneering **Model Context Protocol (MCP)** implementations that bridge autonomous LLM agents (Claude, Cline, Qoder) directly into the live Unity Editor and design tools.
+- ⚡ **Backend & Distributed Systems:** Building asynchronous REST APIs with **FastAPI**, **ZeroC ICE** RPC integrations for VoIP (Mumble), containerized deployments with Docker, and strict automated verification suites with **Pytest**.
+- 🕹️ **Indie Games & Jams:** Active participant in game jams including **GitHub Game Off 2025** (`Tidebreak`) and publishing prototypes on **itch.io**.
 
 ---
 
@@ -41,97 +65,127 @@ motto: "Transforming procedural algorithms and intelligent tools into engaging g
 
 <div align="center">
 
-#### 🎮 Game Development & Graphics
+#### 🎮 Game Development, Physics & Shaders
 <a href="https://skillicons.dev">
-  <img src="https://skillicons.dev/icons?i=unity,cs,blender&theme=dark" height="48" alt="Game Dev Tech" />
+  <img src="https://skillicons.dev/icons?i=unity,cs,blender&theme=dark" height="50" alt="Game Development Stack" />
 </a>
+<br/>
+<sub><b>Unity Engine (URP / HDRP)</b> • <b>C# (.NET)</b> • <b>ShaderLab / HLSL</b> • <b>Procedural Meshes</b> • <b>Blender 3D</b></sub>
 
-#### 🌐 Backend, AI & Scripting
-<a href="https://skillicons.dev">
-  <img src="https://skillicons.dev/icons?i=python,fastapi,js,powershell,bash&theme=dark" height="48" alt="Backend & Scripting" />
-</a>
+<br/><br/>
 
-#### 🎨 Design & Developer Workflow
+#### 🌐 Backend, APIs & Network Systems
 <a href="https://skillicons.dev">
-  <img src="https://skillicons.dev/icons?i=figma,git,github,vscode,visualstudio&theme=dark" height="48" alt="Design & Tools" />
+  <img src="https://skillicons.dev/icons?i=python,fastapi,docker,linux,bash&theme=dark" height="50" alt="Backend Stack" />
 </a>
+<br/>
+<sub><b>Python 3.12+</b> • <b>FastAPI (Async)</b> • <b>ZeroC ICE</b> • <b>Mumble VoIP</b> • <b>Docker & Debian</b> • <b>Pytest</b></sub>
+
+<br/><br/>
+
+#### 🤖 AI Tooling, Design & Workflow
+<a href="https://skillicons.dev">
+  <img src="https://skillicons.dev/icons?i=js,powershell,figma,git,github,vscode,visualstudio&theme=dark" height="50" alt="Workflow and AI Stack" />
+</a>
+<br/>
+<sub><b>Model Context Protocol (MCP)</b> • <b>Figma UI/UX</b> • <b>PowerShell / Bash Automation</b> • <b>Git & CI/CD</b></sub>
 
 </div>
 
 ---
 
-### 🚀 Highlighted Projects
+### 🚀 Flagship Projects
 
 <table width="100%">
   <tr>
     <td width="50%" valign="top">
-      <h3 align="center">🎮 3D-Maze-Generator</h3>
-      <p align="center">
-        <img src="https://img.shields.io/badge/Unity-2021+-black?style=flat-square&logo=unity" />
-        <img src="https://img.shields.io/badge/C%23-Procedural-239120?style=flat-square&logo=c-sharp" />
-      </p>
-      <p>An algorithm-driven maze toolkit for Unity. Features recursive DFS backtracker algorithms, procedural mesh generation, dynamic prefabs, and a built-in first-person exploration controller.</p>
-      <p align="center">
-        <a href="https://github.com/hojjat-shafiee/3d-Maze-Generator"><b>🔗 Explore Repository</b></a>
-      </p>
+      <div align="center">
+        <h3>🎮 3D-Maze-Generator</h3>
+        <p>
+          <img src="https://img.shields.io/badge/Unity-2021+-000000?style=flat-square&logo=unity" />
+          <img src="https://img.shields.io/badge/C%23-Procedural-239120?style=flat-square&logo=c-sharp" />
+          <img src="https://img.shields.io/badge/Runtime-Mesh%20Gen-blue?style=flat-square" />
+        </p>
+      </div>
+      <p>A flexible, algorithm-driven 3D maze generation toolkit for Unity. Features recursive DFS backtracker algorithms, dynamic runtime mesh synthesis, modular prefab instancing, and a first-person controller for instant runtime exploration.</p>
+      <div align="center">
+        <a href="https://github.com/hojjat-shafiee/3d-Maze-Generator"><b>⚡ View Repository & Demos →</b></a>
+      </div>
     </td>
     <td width="50%" valign="top">
-      <h3 align="center">🤖 qoder-unity-mcp</h3>
-      <p align="center">
-        <img src="https://img.shields.io/badge/MCP-Standard-blueviolet?style=flat-square" />
-        <img src="https://img.shields.io/badge/Editor-Automation-orange?style=flat-square&logo=unity" />
-      </p>
-      <p>A Model Context Protocol (MCP) server that empowers AI agents to manipulate a live Unity Editor session: create & wire GameObjects, edit prefabs, inspect hierarchies, and automate game development.</p>
-      <p align="center">
-        <a href="https://github.com/hojjat-shafiee/qoder-unity-mcp"><b>🔗 Explore Repository</b></a>
-      </p>
+      <div align="center">
+        <h3>🤖 qoder-unity-mcp</h3>
+        <p>
+          <img src="https://img.shields.io/badge/Protocol-MCP-8A2BE2?style=flat-square" />
+          <img src="https://img.shields.io/badge/Editor-Automation-orange?style=flat-square&logo=unity" />
+          <img src="https://img.shields.io/badge/Agentic-Tooling-00d26a?style=flat-square" />
+        </p>
+      </div>
+      <p>An innovative Model Context Protocol (MCP) server that empowers AI agents with live Unity Editor control. Enables automated GameObject generation, hierarchy wiring, component modifications, prefab management, and automated script authoring.</p>
+      <div align="center">
+        <a href="https://github.com/hojjat-shafiee/qoder-unity-mcp"><b>⚡ View Repository & Demos →</b></a>
+      </div>
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <h3 align="center">🌊 Tidebreak (Game Off 2025)</h3>
-      <p align="center">
-        <img src="https://img.shields.io/badge/Game%20Jam-Game%20Off%202025-blue?style=flat-square&logo=github" />
-        <img src="https://img.shields.io/badge/Arcade-2D%20Top--Down-yellow?style=flat-square" />
-      </p>
-      <p>A vibrant 2D top-down arcade experience built for GitHub's Game Off 2025. Features flowing item collection mechanics, dynamic difficulty scaling, and wave-based scoring.</p>
-      <p align="center">
-        <a href="https://github.com/hojjat-shafiee/Tidebreak"><b>🔗 Explore Repository</b></a>
-      </p>
+      <div align="center">
+        <h3>🎙️ mumble-server-rest-api</h3>
+        <p>
+          <img src="https://img.shields.io/badge/FastAPI-Async-009688?style=flat-square&logo=fastapi" />
+          <img src="https://img.shields.io/badge/ZeroC-ICE%20RPC-blue?style=flat-square" />
+          <img src="https://img.shields.io/badge/CI-Pytest%20Suite-brightgreen?style=flat-square&logo=pytest" />
+        </p>
+      </div>
+      <p>High-performance asynchronous REST API engine for Mumble Murmur voice servers. Features ZeroC ICE integration, Debian 12 packaging, automated Pytest CI verification, and comprehensive agent ecosystem configs (<code>llms.txt</code>, <code>AGENTS.md</code>).</p>
+      <div align="center">
+        <a href="https://github.com/hojjat-shafiee/mumble-server-rest-api"><b>⚡ View Repository & Demos →</b></a>
+      </div>
     </td>
     <td width="50%" valign="top">
-      <h3 align="center">🎙️ mumble-server-rest-api</h3>
-      <p align="center">
-        <img src="https://img.shields.io/badge/FastAPI-Async-009688?style=flat-square&logo=fastapi" />
-        <img src="https://img.shields.io/badge/VoIP-Mumble%20Murmur-red?style=flat-square" />
-      </p>
-      <p>High-performance asynchronous REST API engine for Mumble Murmur servers built with FastAPI. Provides effortless server management and user coordination for VoIP gaming setups.</p>
-      <p align="center">
-        <a href="https://github.com/hojjat-shafiee/mumble-server-rest-api"><b>🔗 Explore Repository</b></a>
-      </p>
+      <div align="center">
+        <h3>🌊 Tidebreak (Game Off 2025)</h3>
+        <p>
+          <img src="https://img.shields.io/badge/Game%20Jam-GitHub%20Game%20Off-purple?style=flat-square&logo=github" />
+          <img src="https://img.shields.io/badge/Genre-2D%20Arcade-F59E0B?style=flat-square" />
+          <img src="https://img.shields.io/badge/Engine-JS%20Canvas-F7DF1E?style=flat-square&logo=javascript" />
+        </p>
+      </div>
+      <p>A fast-paced 2D top-down arcade game created for the annual <b>GitHub Game Off 2025</b> theme ("Waves"). Features fluid wave-item collection mechanics, risk-reward dodging, dynamic sound feedback, and progressive difficulty pacing.</p>
+      <div align="center">
+        <a href="https://github.com/hojjat-shafiee/Tidebreak"><b>⚡ View Repository & Demos →</b></a>
+      </div>
     </td>
   </tr>
 </table>
 
+---
+
+### 📂 All Public Repositories
+
 <details>
-<summary><b>📂 More Public Projects & Game Demos (Click to expand)</b></summary>
+<summary><b>🔍 Click to expand the full catalog of public repositories & tools</b></summary>
 
 <br/>
 
-| Project | Description | Core Tech |
-| :--- | :--- | :--- |
-| **[TerrainGenerator](https://github.com/hojjat-shafiee/TerrainGenerator)** | Procedural terrain and heightmap generation framework for Unity. | `Unity` `C#` `Noise/Heightmaps` |
-| **[Dino](https://github.com/hojjat-shafiee/Dino)** | Clean endless-runner architecture inspired by Chrome's offline Dino game. | `Unity` `2D` `C#` |
-| **[WheelOfLuck](https://github.com/hojjat-shafiee/WheelOfLuck)** | Customizable Wheel of Fortune prize system with physics and shaders. | `Unity` `ShaderLab` `C#` |
-| **[AndroidHotSpotDetector](https://github.com/hojjat-shafiee/AndroidHotSpotDetector)** | Native Android hotspot connection detector module for Unity mobile titles. | `Unity` `Android` `C#` |
-| **[Mumble-Unity](https://github.com/hojjat-shafiee/Mumble-Unity)** | Low-latency spatial Mumble VoIP client integration for Unity 3D games. | `Unity` `VoIP` `Audio` |
-| **[figma-mcp-browser](https://github.com/hojjat-shafiee/figma-mcp-browser)** | Free MCP server for Figma UI/UX extraction and automation. | `MCP` `JavaScript` `Figma` |
+| Repository | Domain | Core Stack | Description |
+| :--- | :---: | :---: | :--- |
+| **[3D-Maze-Generator](https://github.com/hojjat-shafiee/3d-Maze-Generator)** | 🎮 Game Dev | `Unity` `C#` `Procedural` | Algorithm-driven procedural 3D maze toolkit with runtime FPS exploration. |
+| **[TerrainGenerator](https://github.com/hojjat-shafiee/TerrainGenerator)** | 🎮 Game Dev | `Unity` `C#` `Noise` | Procedural terrain and landscape generator using noise algorithms and heightmaps. |
+| **[Tidebreak](https://github.com/hojjat-shafiee/Tidebreak)** | 🎮 Game Jam | `JavaScript` `2D Arcade` | Official GitHub Game Off 2025 entry featuring wave collection mechanics. |
+| **[Dino](https://github.com/hojjat-shafiee/Dino)** | 🎮 Game Dev | `Unity` `2D` `C#` | Polished endless-runner architecture inspired by the classic offline runner. |
+| **[WheelOfLuck](https://github.com/hojjat-shafiee/WheelOfLuck)** | 🎮 Game Dev | `Unity` `ShaderLab` `C#` | Wheel of fortune prize distribution system with custom shaders and physics. |
+| **[AndroidHotSpotDetector](https://github.com/hojjat-shafiee/AndroidHotSpotDetector)** | 📱 Mobile | `Unity` `Android` `C#` | Mobile utility plugin to query and detect Wi-Fi hotspot connection states. |
+| **[qoder-unity-mcp](https://github.com/hojjat-shafiee/qoder-unity-mcp)** | 🤖 AI / MCP | `MCP` `Unity` `PowerShell` | Model Context Protocol server enabling AI agents to control live Unity Editor. |
+| **[figma-mcp-browser](https://github.com/hojjat-shafiee/figma-mcp-browser)** | 🤖 AI / MCP | `Node.js` `Figma` `MCP` | MCP server for automating Figma design queries, components, and asset exports. |
+| **[mumble-server-rest-api](https://github.com/hojjat-shafiee/mumble-server-rest-api)** | 🌐 Backend | `Python` `FastAPI` `ICE` | High-throughput async REST API for Mumble Murmur servers with automated testing. |
+| **[Mumble-Unity](https://github.com/hojjat-shafiee/Mumble-Unity)** | 🎙️ Audio/VoIP | `Unity` `C#` `VoIP` | Low-latency spatial audio VoIP client implementation for Unity multiplayer titles. |
 
 </details>
 
 ---
 
-### 📈 GitHub Stats & Insights
+### 📊 GitHub Analytics
 
 <div align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=hojjat-shafiee&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117" alt="GitHub Stats" height="155" />
@@ -144,25 +198,31 @@ motto: "Transforming procedural algorithms and intelligent tools into engaging g
 
 ---
 
-### 🤝 Let's Connect & Collaborate!
+### 📬 Let's Connect!
 
 <div align="center">
 
+  <p>Got an interesting game project, procedural challenge, or agentic tooling idea? Let's build something awesome together!</p>
+
   <a href="https://www.linkedin.com/in/hojjat-shafiee/">
-    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+    <img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
   </a>
   &nbsp;
   <a href="https://hojjat-shafiee.itch.io">
-    <img src="https://img.shields.io/badge/itch.io-FA5C5C?style=for-the-badge&logo=itchdotio&logoColor=white" alt="itch.io" />
+    <img src="https://img.shields.io/badge/itch.io-Follow-FA5C5C?style=for-the-badge&logo=itchdotio&logoColor=white" alt="itch.io" />
+  </a>
+  &nbsp;
+  <a href="mailto:better_call_hojat@proton.me">
+    <img src="https://img.shields.io/badge/ProtonMail-Direct%20Message-6D4AFF?style=for-the-badge&logo=protonmail&logoColor=white" alt="ProtonMail" />
   </a>
   &nbsp;
   <a href="https://github.com/hojjat-shafiee">
-    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
+    <img src="https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
   </a>
 
   <br/><br/>
 
-  <!-- Footer Waving Banner -->
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=46,38,24,12&height=120&section=footer" width="100%" />
+  <!-- Footer Wave Banner -->
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=bb9af7,7aa2f7,414868,24283b,1a1b26&height=120&section=footer" width="100%" alt="Footer Banner" />
 
 </div>
