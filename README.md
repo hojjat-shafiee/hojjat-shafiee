@@ -1,8 +1,8 @@
 <div align="center">
 
-  <!-- Self-Hosted Native Vector Banner (100% Reliable & Zero External Dependency) -->
+  <!-- Self-Hosted High-Resolution Banner (Zero External Dependency, 100% Guaranteed Load) -->
   <a href="https://github.com/hojjat-shafiee">
-    <img src="./assets/banner.svg" width="100%" alt="Hojjat Shafiee - Unity Game Developer & Systems Architect" />
+    <img src="./assets/banner.png" width="100%" alt="Hojjat Shafiee - Unity Game Developer &amp; Systems Architect" />
   </a>
 
   <br/><br/>
@@ -71,7 +71,7 @@ Game Jams: GitHub Game Off 2025 Participant (Tidebreak)
 Philosophy: "Bridging procedural algorithms, engaging game mechanics, and autonomous agent tooling."
 ```
 
-- 🎮 **Game Engineering & Graphics:** Over a decade in software development with focused specialization in **Unity (2D/3D)**, algorithm-driven procedural mesh synthesis (mazes, terrain heightmaps), custom shaders, and responsive player movement systems.
+- 🎮 **Game Engineering & Graphics:** Specializing in **Unity (2D/3D)**, algorithm-driven procedural mesh synthesis (mazes, terrain heightmaps), custom shaders, and responsive player movement systems.
 - 🤖 **Agentic Engineering & MCP:** Pioneering integrations for the **Model Context Protocol (MCP)**, connecting LLM agents (Claude, Cline, Qoder) directly into a live Unity Editor session to automate scene hierarchy management, prefab wiring, and script edits.
 - ⚡ **High-Throughput Backends & VoIP:** Architecting asynchronous REST APIs using **FastAPI** coupled with **ZeroC ICE RPC** protocols to control Mumble Murmur voice servers for low-latency in-game multiplayer communication.
 
@@ -92,7 +92,7 @@ Philosophy: "Bridging procedural algorithms, engaging game mechanics, and autono
       </div>
       <p>A procedural maze generation toolkit for Unity. Implements recursive DFS backtracking algorithms, real-time procedural mesh generation or prefab synthesis, and an integrated first-person controller for runtime exploration.</p>
       <div align="center">
-        <a href="https://github.com/hojjat-shafiee/3d-Maze-Generator"><b>⚡ View Repository & Source Code →</b></a>
+        <a href="https://github.com/hojjat-shafiee/3d-Maze-Generator"><b>⚡ View Repository &amp; Source Code →</b></a>
       </div>
     </td>
     <td width="50%" valign="top">
@@ -106,7 +106,7 @@ Philosophy: "Bridging procedural algorithms, engaging game mechanics, and autono
       </div>
       <p>Model Context Protocol (MCP) plugin providing AI agents with live Unity Editor access. Enables automated scene hierarchy inspection, GameObject creation and wiring, component editing, prefab pipeline automation, and script generation.</p>
       <div align="center">
-        <a href="https://github.com/hojjat-shafiee/qoder-unity-mcp"><b>⚡ View Repository & Source Code →</b></a>
+        <a href="https://github.com/hojjat-shafiee/qoder-unity-mcp"><b>⚡ View Repository &amp; Source Code →</b></a>
       </div>
     </td>
   </tr>
@@ -136,7 +136,7 @@ Philosophy: "Bridging procedural algorithms, engaging game mechanics, and autono
       </div>
       <p>High-throughput async REST API for Mumble Murmur VoIP servers. Features ZeroC ICE RPC protocols, Debian 12 packaging, automated Pytest CI verification, and full AI agent ecosystem configurations (<code>llms.txt</code>, <code>AGENTS.md</code>).</p>
       <div align="center">
-        <a href="https://github.com/hojjat-shafiee/mumble-server-rest-api"><b>⚡ View Repository & Source Code →</b></a>
+        <a href="https://github.com/hojjat-shafiee/mumble-server-rest-api"><b>⚡ View Repository &amp; Source Code →</b></a>
       </div>
     </td>
   </tr>
@@ -153,7 +153,7 @@ Philosophy: "Bridging procedural algorithms, engaging game mechanics, and autono
   <img src="https://skillicons.dev/icons?i=unity,cs,blender&theme=dark" height="52" alt="Game Dev Stack" />
 </a>
 <br/>
-<sub><b>Unity (2D/3D)</b> • <b>C# (.NET)</b> • <b>ShaderLab & HLSL</b> • <b>Procedural Mesh Synthesis</b> • <b>Blender 3D Modeling</b></sub>
+<sub><b>Unity (2D/3D)</b> • <b>C# (.NET)</b> • <b>ShaderLab &amp; HLSL</b> • <b>Procedural Mesh Synthesis</b> • <b>Blender 3D Modeling</b></sub>
 
 <br/><br/>
 
@@ -162,7 +162,7 @@ Philosophy: "Bridging procedural algorithms, engaging game mechanics, and autono
   <img src="https://skillicons.dev/icons?i=python,fastapi,docker,linux,bash&theme=dark" height="52" alt="Backend Stack" />
 </a>
 <br/>
-<sub><b>Python 3.12+</b> • <b>FastAPI (Async)</b> • <b>ZeroC ICE RPC</b> • <b>Mumble VoIP</b> • <b>Docker & Debian</b> • <b>Pytest CI</b></sub>
+<sub><b>Python 3.12+</b> • <b>FastAPI (Async)</b> • <b>ZeroC ICE RPC</b> • <b>Mumble VoIP</b> • <b>Docker &amp; Debian</b> • <b>Pytest CI</b></sub>
 
 <br/><br/>
 
@@ -180,7 +180,7 @@ Philosophy: "Bridging procedural algorithms, engaging game mechanics, and autono
 ### 📂 All Repositories & Experiments
 
 <details>
-<summary><b>🔍 Expand full public repository catalog (15 Projects & Tools)</b></summary>
+<summary><b>🔍 Expand full public repository catalog (15 Projects &amp; Tools)</b></summary>
 
 <br/>
 
@@ -228,6 +228,6 @@ Philosophy: "Bridging procedural algorithms, engaging game mechanics, and autono
   <br/><br/>
 
   <!-- Self-Hosted Native Vector Footer -->
-  <img src="./assets/footer.svg" width="100%" alt="Footer Divider" />
+  <img src="./assets/footer.png" width="100%" alt="Footer Divider" />
 
 </div>
