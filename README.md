@@ -45,7 +45,7 @@
   <!-- Quick Navigation Bar -->
   <p align="center">
     <b><a href="#-about-me">About Me</a></b> &nbsp;•&nbsp;
-    <b><a href="#-annual-contribution-trend--activity">Contribution Trend</a></b> &nbsp;•&nbsp;
+    <b><a href="#-live-contribution-activity--streak">Live Contributions</a></b> &nbsp;•&nbsp;
     <b><a href="#-featured-projects--top-stars">Featured Projects</a></b> &nbsp;•&nbsp;
     <b><a href="#️-the-dev-toolkit">The Toolkit</a></b> &nbsp;•&nbsp;
     <b><a href="#-all-repositories--experiments">All Repos</a></b> &nbsp;•&nbsp;
@@ -79,11 +79,11 @@ Philosophy:  "Bridging procedural algorithms, engaging game mechanics, and auton
 
 ---
 
-### 📈 Annual Contribution Trend & Activity
+### 📈 Live Contribution Activity & Streak
 
 <div align="center">
   <a href="https://github.com/hojjat-shafiee">
-    <img src="./assets/contributions.png" width="100%" alt="Annual Contribution Trend &amp; Commit Activity" />
+    <img src="https://ghchart.rshah.org/38bdf8/hojjat-shafiee" alt="Live GitHub Contribution Heatmap" width="100%" />
   </a>
 </div>
 
@@ -91,7 +91,7 @@ Philosophy:  "Bridging procedural algorithms, engaging game mechanics, and auton
 
 <div align="center">
   <a href="https://github.com/hojjat-shafiee">
-    <img src="https://github-readme-streak-stats.herokuapp.com/?user=hojjat-shafiee&theme=tokyonight&hide_border=true&background=0D1117" alt="GitHub Streak Stats" />
+    <img src="https://github-readme-streak-stats.herokuapp.com/?user=hojjat-shafiee&theme=tokyonight&hide_border=true&background=0D1117" alt="Live GitHub Streak Stats" />
   </a>
 </div>
 
