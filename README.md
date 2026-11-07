@@ -1,6 +1,6 @@
 <div align="center">
 
-  <!-- Self-Hosted High-Resolution Banner (Zero External Dependency, 100% Guaranteed Load) -->
+  <!-- Self-Hosted High-Resolution Cyberpunk Banner -->
   <a href="https://github.com/hojjat-shafiee">
     <img src="./assets/banner.png" width="100%" alt="Hojjat Shafiee - Unity Game Developer &amp; Systems Architect" />
   </a>
@@ -44,33 +44,40 @@
 
   <!-- Quick Navigation Bar -->
   <p align="center">
-    <b><a href="#-about-me">About Me</a></b> &nbsp;•&nbsp;
-    <b><a href="#-live-contribution-activity--streak">Live Contributions</a></b> &nbsp;•&nbsp;
-    <b><a href="#-featured-projects--top-stars">Featured Projects</a></b> &nbsp;•&nbsp;
-    <b><a href="#️-the-dev-toolkit">The Toolkit</a></b> &nbsp;•&nbsp;
-    <b><a href="#-all-repositories--experiments">All Repos</a></b> &nbsp;•&nbsp;
-    <b><a href="#-connect--collaborate">Connect</a></b>
+    <b><a href="#-character-profile--system-hud">Character Profile</a></b> &nbsp;•&nbsp;
+    <b><a href="#-live-contribution-arcade">Contribution Arcade</a></b> &nbsp;•&nbsp;
+    <b><a href="#-active-quests--flagship-projects">Active Quests</a></b> &nbsp;•&nbsp;
+    <b><a href="#️-the-armory--tech-stack">The Armory</a></b> &nbsp;•&nbsp;
+    <b><a href="#-quest-archive--all-projects">Quest Archive</a></b> &nbsp;•&nbsp;
+    <b><a href="#-multiplayer-co-op--connect">Connect</a></b>
   </p>
 
 </div>
 
 ---
 
-### 🕹️ About Me
+### 🕹️ Character Profile & System HUD
 
-```bash
-╭─ hojjat@dev-workstation ~
-╰─$ neofetch --profile "Hojjat Shafiee"
-
-─────────────────────────────────────────────────────────────────
-Role:        Unity Game Developer & Systems Architect
-Location:    Isfahan, Iran 📍
-Status:      Open to Work 🟢 (Remote / Relocation)
-Core Focus:  Procedural World Generation, Gameplay Architecture & AI Engine Tooling
-Key Stack:   Unity (C# / ShaderLab), Python (FastAPI), ZeroC ICE, MCP
-Game Jams:   GitHub Game Off 2025 Participant (Tidebreak)
-Philosophy:  "Bridging procedural algorithms, engaging game mechanics, and autonomous agent tooling."
-─────────────────────────────────────────────────────────────────
+```text
+╭──────────────────────────────────────────────────────────────────────────────╮
+│  PLAYER:    Hojjat Shafiee        CLASS:    Systems Architect & Game Dev     │
+│  STATUS:    🟢 OPEN TO WORK       LOCATION: Isfahan, Iran 📍                 │
+│  RANK:      10+ Years Experience  ACTIVITY: 48-Day Active Streak 🔥          │
+├──────────────────────────────────────────────────────────────────────────────┤
+│  POWER ATTRIBUTES:                                                           │
+│  [■■■■■■■■■■] 100%  Unity Engine Architecture (2D/3D, URP, C# .NET)          │
+│  [■■■■■■■■■■] 100%  Procedural World Synthesis (DFS Mazes, Terrain, Meshes)  │
+│  [■■■■■■■■■□]  90%  AI & Agentic Tooling (Model Context Protocol / MCP)      │
+│  [■■■■■■■■■□]  90%  High-Throughput Backends (FastAPI, ZeroC ICE, Pytest CI) │
+│  [■■■■■■■■□□]  85%  Technical Art & Shaders (ShaderLab, HLSL, Blender)       │
+├──────────────────────────────────────────────────────────────────────────────┤
+│  EQUIPPED LOADOUT:                                                           │
+│  • Primary:   Unity 2021+ LTS • C# • Custom Shaders • Procedural Mesh Engine │
+│  • Secondary: Python 3.12 • FastAPI Async • ZeroC ICE RPC • Mumble Murmur   │
+│  • Tactical:  Model Context Protocol (MCP) • Figma UI/UX • Docker & Linux    │
+│  • Guild:     GitHub Game Off 2025 Participant (Tidebreak)                   │
+│  • Motto:     "Bridging procedural math, engaging gameplay, and AI agents."  │
+╰──────────────────────────────────────────────────────────────────────────────╯
 ```
 
 - 🎮 **Game Engineering & Graphics:** Specializing in **Unity (2D/3D)**, algorithm-driven procedural mesh synthesis (mazes, terrain heightmaps), custom shaders, and responsive player movement systems.
@@ -79,45 +86,49 @@ Philosophy:  "Bridging procedural algorithms, engaging game mechanics, and auton
 
 ---
 
-### 📈 Live Contribution Activity & Streak
+### 🎮 Live Contribution Arcade
 
 <div align="center">
-  <a href="https://github.com/hojjat-shafiee">
-    <img src="https://ghchart.rshah.org/38bdf8/hojjat-shafiee" alt="Live GitHub Contribution Heatmap" width="100%" />
-  </a>
-</div>
 
-<br/>
+  <!-- Live Animated Snake Eating Real Contributions -->
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/hojjat-shafiee/hojjat-shafiee/output/github-contribution-grid-snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/hojjat-shafiee/hojjat-shafiee/output/github-contribution-grid-snake.svg" />
+    <img alt="GitHub Contribution Snake Animation" src="https://raw.githubusercontent.com/hojjat-shafiee/hojjat-shafiee/output/github-contribution-grid-snake-dark.svg" width="100%" />
+  </picture>
 
-<div align="center">
+  <br/><br/>
+
+  <!-- Live Streak Stats Radar -->
   <a href="https://github.com/hojjat-shafiee">
     <img src="https://github-readme-streak-stats.herokuapp.com/?user=hojjat-shafiee&theme=tokyonight&hide_border=true&background=0D1117" alt="Live GitHub Streak Stats" />
   </a>
+
 </div>
 
 ---
 
-### 🌟 Featured Projects (Top Stars & Flagship Work)
+### 🏆 Active Quests & Flagship Projects
 
 <table width="100%">
   <tr>
     <td width="50%" valign="top">
       <div align="center">
-        <h3>🎨 figma-mcp-browser</h3>
+        <h3>🎨 Quest 01: Figma MCP Browser</h3>
         <p>
           <img src="https://img.shields.io/github/stars/hojjat-shafiee/figma-mcp-browser?style=flat-square&logo=github&color=e3b341" alt="Stars" />
           <img src="https://img.shields.io/badge/Standard-MCP-8A2BE2?style=flat-square" />
           <img src="https://img.shields.io/badge/Design-Figma-F24E1E?style=flat-square&logo=figma" />
         </p>
       </div>
-      <p>Free Model Context Protocol (MCP) server for Figma workspace and asset interaction. Bridges autonomous AI agents with design files to inspect layouts, extract components, and automate UI asset pipelines.</p>
+      <p><b>Objective:</b> Bridge autonomous AI agents directly with Figma workspaces. Enables programmatic inspection of design trees, component extraction, and automated UI token generation.</p>
       <div align="center">
-        <a href="https://github.com/hojjat-shafiee/figma-mcp-browser"><b>⚡ View Repository &amp; Source Code →</b></a>
+        <a href="https://github.com/hojjat-shafiee/figma-mcp-browser"><b>⚡ Inspect Quest Repository →</b></a>
       </div>
     </td>
     <td width="50%" valign="top">
       <div align="center">
-        <h3>🎙️ mumble-server-rest-api</h3>
+        <h3>🎙️ Quest 02: Mumble REST Engine</h3>
         <p>
           <img src="https://img.shields.io/github/stars/hojjat-shafiee/mumble-server-rest-api?style=flat-square&logo=github&color=e3b341" alt="Stars" />
           <img src="https://img.shields.io/badge/Backend-FastAPI-009688?style=flat-square&logo=fastapi" />
@@ -125,16 +136,16 @@ Philosophy:  "Bridging procedural algorithms, engaging game mechanics, and auton
           <img src="https://img.shields.io/badge/Testing-Pytest%20CI-brightgreen?style=flat-square&logo=pytest" />
         </p>
       </div>
-      <p>High-throughput async REST API for Mumble Murmur VoIP servers. Features ZeroC ICE RPC protocols, Debian 12 packaging, automated Pytest CI verification, and full AI agent ecosystem configurations (<code>llms.txt</code>, <code>AGENTS.md</code>).</p>
+      <p><b>Objective:</b> High-throughput async REST API for Mumble Murmur voice servers. Features ZeroC ICE RPC protocols, Debian 12 packaging, automated Pytest CI verification, and agentic configs (<code>llms.txt</code>, <code>AGENTS.md</code>).</p>
       <div align="center">
-        <a href="https://github.com/hojjat-shafiee/mumble-server-rest-api"><b>⚡ View Repository &amp; Source Code →</b></a>
+        <a href="https://github.com/hojjat-shafiee/mumble-server-rest-api"><b>⚡ Inspect Quest Repository →</b></a>
       </div>
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
       <div align="center">
-        <h3>🎮 3D-Maze-Generator</h3>
+        <h3>🎮 Quest 03: 3D-Maze-Generator</h3>
         <p>
           <img src="https://img.shields.io/github/stars/hojjat-shafiee/3d-Maze-Generator?style=flat-square&logo=github&color=e3b341" alt="Stars" />
           <img src="https://img.shields.io/badge/Engine-Unity%202021+-black?style=flat-square&logo=unity" />
@@ -142,14 +153,14 @@ Philosophy:  "Bridging procedural algorithms, engaging game mechanics, and auton
           <img src="https://img.shields.io/badge/Algo-DFS%20Backtracker-blue?style=flat-square" />
         </p>
       </div>
-      <p>A procedural maze generation toolkit for Unity. Implements recursive DFS backtracking algorithms, real-time procedural mesh generation or prefab synthesis, and an integrated first-person controller for runtime exploration.</p>
+      <p><b>Objective:</b> Algorithm-driven 3D maze toolkit for Unity. Implements recursive DFS backtracking, real-time procedural mesh synthesis, dynamic prefab spawning, and an integrated first-person controller for runtime exploration.</p>
       <div align="center">
-        <a href="https://github.com/hojjat-shafiee/3d-Maze-Generator"><b>⚡ View Repository &amp; Source Code →</b></a>
+        <a href="https://github.com/hojjat-shafiee/3d-Maze-Generator"><b>⚡ Inspect Quest Repository →</b></a>
       </div>
     </td>
     <td width="50%" valign="top">
       <div align="center">
-        <h3>🤖 qoder-unity-mcp</h3>
+        <h3>🤖 Quest 04: Qoder Unity MCP</h3>
         <p>
           <img src="https://img.shields.io/github/stars/hojjat-shafiee/qoder-unity-mcp?style=flat-square&logo=github&color=e3b341" alt="Stars" />
           <img src="https://img.shields.io/badge/Standard-MCP-8A2BE2?style=flat-square" />
@@ -157,9 +168,26 @@ Philosophy:  "Bridging procedural algorithms, engaging game mechanics, and auton
           <img src="https://img.shields.io/badge/Automation-AI%20Agentic-00d26a?style=flat-square" />
         </p>
       </div>
-      <p>Model Context Protocol (MCP) plugin providing AI agents with live Unity Editor access. Enables automated scene hierarchy inspection, GameObject creation and wiring, component editing, prefab pipeline automation, and script generation.</p>
+      <p><b>Objective:</b> Model Context Protocol (MCP) server providing AI agents with live Unity Editor control. Enables automated scene hierarchy inspection, GameObject wiring, component editing, and prefab automation.</p>
       <div align="center">
-        <a href="https://github.com/hojjat-shafiee/qoder-unity-mcp"><b>⚡ View Repository &amp; Source Code →</b></a>
+        <a href="https://github.com/hojjat-shafiee/qoder-unity-mcp"><b>⚡ Inspect Quest Repository →</b></a>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" valign="top">
+      <div align="center">
+        <h3>🌊 Quest 05: Tidebreak (Game Off 2025)</h3>
+        <p>
+          <img src="https://img.shields.io/badge/Game%20Jam-GitHub%20Game%20Off-purple?style=flat-square&logo=github" />
+          <img src="https://img.shields.io/badge/Genre-2D%20Top--Down%20Arcade-F59E0B?style=flat-square" />
+          <img src="https://img.shields.io/badge/Theme-WAVES-blue?style=flat-square" />
+          <img src="https://img.shields.io/badge/Engine-HTML5%20Canvas-F7DF1E?style=flat-square&logo=javascript" />
+        </p>
+      </div>
+      <p align="center"><b>Objective:</b> Official GitHub Game Off 2025 entry featuring fluid wave collection mechanics, risk-reward dodging, dynamic particle feedback loops, and progressive difficulty curves.</p>
+      <div align="center">
+        <a href="https://github.com/hojjat-shafiee/Tidebreak"><b>⚡ Play Game &amp; View Jam Source →</b></a>
       </div>
     </td>
   </tr>
@@ -167,7 +195,7 @@ Philosophy:  "Bridging procedural algorithms, engaging game mechanics, and auton
 
 ---
 
-### 🛠️ The Dev Toolkit
+### ⚔️ The Armory & Tech Stack
 
 <div align="center">
 
@@ -200,7 +228,7 @@ Philosophy:  "Bridging procedural algorithms, engaging game mechanics, and auton
 
 ---
 
-### 📂 All Repositories & Experiments
+### 📜 Quest Archive & Public Repositories
 
 <details>
 <summary><b>🔍 Expand full public repository catalog (Ranked by Stars &amp; Categories)</b></summary>
@@ -226,7 +254,7 @@ Philosophy:  "Bridging procedural algorithms, engaging game mechanics, and auton
 
 ---
 
-### 🤝 Connect & Collaborate
+### 🤝 Multiplayer Co-op & Connect
 
 <div align="center">
 
