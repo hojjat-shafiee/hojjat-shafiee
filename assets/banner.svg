@@ -1,186 +1,292 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 340" width="1200" height="340">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="1200" height="360">
   <defs>
     <!-- Background Gradient -->
     <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0b0f19"/>
-      <stop offset="35%" stop-color="#111827"/>
-      <stop offset="70%" stop-color="#161b2c"/>
-      <stop offset="100%" stop-color="#0a0d14"/>
+      <stop offset="0%" stop-color="#070a12"/>
+      <stop offset="35%" stop-color="#0c1222"/>
+      <stop offset="70%" stop-color="#11182c"/>
+      <stop offset="100%" stop-color="#06080f"/>
     </linearGradient>
 
-    <!-- Glowing Accent Gradients -->
-    <linearGradient id="text-grad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#38bdf8"/>
-      <stop offset="40%" stop-color="#818cf8"/>
-      <stop offset="75%" stop-color="#c084fc"/>
-      <stop offset="100%" stop-color="#f472b6"/>
+    <!-- Neon Header Gradient -->
+    <linearGradient id="neon-cyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f5ff"/>
+      <stop offset="45%" stop-color="#38bdf8"/>
+      <stop offset="80%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#c084fc"/>
     </linearGradient>
 
-    <linearGradient id="badge-grad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#0ea5e9"/>
-      <stop offset="100%" stop-color="#8b5cf6"/>
+    <linearGradient id="neon-pink" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f43f5e"/>
+      <stop offset="50%" stop-color="#ec4899"/>
+      <stop offset="100%" stop-color="#a855f7"/>
     </linearGradient>
 
-    <linearGradient id="border-glow" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.9"/>
-      <stop offset="50%" stop-color="#818cf8" stop-opacity="0.5"/>
-      <stop offset="100%" stop-color="#c084fc" stop-opacity="0.9"/>
+    <linearGradient id="hp-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#00f5ff"/>
     </linearGradient>
 
-    <radialGradient id="ambient-cyan" cx="12%" cy="30%" r="55%">
-      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.22"/>
-      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0"/>
+    <linearGradient id="mp-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+
+    <linearGradient id="hud-line" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f5ff" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#a855f7" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#ec4899" stop-opacity="0.8"/>
+    </linearGradient>
+
+    <!-- Ambient Glows -->
+    <radialGradient id="glow-cyan" cx="15%" cy="30%" r="55%">
+      <stop offset="0%" stop-color="#00f5ff" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#00f5ff" stop-opacity="0"/>
     </radialGradient>
 
-    <radialGradient id="ambient-purple" cx="88%" cy="65%" r="55%">
-      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.25"/>
-      <stop offset="100%" stop-color="#a855f7" stop-opacity="0"/>
+    <radialGradient id="glow-magenta" cx="85%" cy="65%" r="55%">
+      <stop offset="0%" stop-color="#d946ef" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#d946ef" stop-opacity="0"/>
     </radialGradient>
 
-    <!-- Cyber Grid Pattern -->
-    <pattern id="cyber-grid" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.75" stroke-opacity="0.5"/>
-      <circle cx="40" cy="40" r="1.2" fill="#38bdf8" fill-opacity="0.3"/>
+    <!-- Sci-fi / Retro Grid -->
+    <pattern id="gaming-grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#1e293b" stroke-width="0.7" stroke-opacity="0.5"/>
+      <circle cx="30" cy="30" r="1" fill="#00f5ff" fill-opacity="0.35"/>
     </pattern>
 
-    <!-- Filter for Glow Effects -->
-    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="4" result="blur" />
-      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    <!-- Scanline Overlay -->
+    <pattern id="scanlines" width="100" height="4" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="100" y2="0" stroke="#000000" stroke-width="1.2" stroke-opacity="0.22"/>
+    </pattern>
+
+    <!-- Glow Filter -->
+    <filter id="bloom" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
     </filter>
   </defs>
 
   <style>
-    .title {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    .font-hud {
+      font-family: 'SF Mono', Monaco, 'Cascadia Code', Consolas, 'Courier New', monospace;
+    }
+    .font-sans {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    }
+    .player-tag {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      fill: #00f5ff;
+    }
+    .title-main {
+      font-size: 54px;
       font-weight: 900;
-      font-size: 58px;
       letter-spacing: -0.5px;
     }
-    .badge-text {
-      font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+    .subtitle-txt {
+      font-size: 19px;
+      font-weight: 500;
+      fill: #94a3b8;
+    }
+    .hud-label {
+      font-size: 11px;
       font-weight: 700;
-      font-size: 13px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      fill: #ffffff;
+      letter-spacing: 1.5px;
+      fill: #64748b;
     }
-    .subtitle {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      font-weight: 500;
-      font-size: 21px;
-      fill: #94a3b8;
+    .hud-val {
+      font-size: 12px;
+      font-weight: 700;
+      fill: #f1f5f9;
     }
-    .tech-pill {
-      font-family: 'SF Mono', Monaco, Menlo, Consolas, monospace;
-      font-size: 13px;
-      font-weight: 600;
+    .pill-txt {
+      font-size: 12px;
+      font-weight: 700;
     }
-    .meta-text {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      font-size: 14px;
-      font-weight: 500;
-      fill: #94a3b8;
+    .telemetry {
+      font-size: 11px;
+      fill: #38bdf8;
+      letter-spacing: 1px;
     }
   </style>
 
   <!-- Background Base -->
-  <rect width="1200" height="340" rx="16" fill="url(#bg-grad)"/>
+  <rect width="1200" height="360" rx="16" fill="url(#bg-grad)"/>
+  <rect width="1200" height="360" rx="16" fill="url(#glow-cyan)"/>
+  <rect width="1200" height="360" rx="16" fill="url(#glow-magenta)"/>
+  <rect width="1200" height="360" rx="16" fill="url(#gaming-grid)"/>
 
-  <!-- Ambient Light Orbs -->
-  <rect width="1200" height="340" rx="16" fill="url(#ambient-cyan)"/>
-  <rect width="1200" height="340" rx="16" fill="url(#ambient-purple)"/>
+  <!-- Outer HUD Cyber Frame & Corner Brackets -->
+  <rect x="14" y="14" width="1172" height="332" rx="12" fill="none" stroke="#1e293b" stroke-width="1.2"/>
+  
+  <!-- Corner Brackets (HUD Reticles) -->
+  <path d="M 14 36 L 14 14 L 36 14" fill="none" stroke="#00f5ff" stroke-width="3"/>
+  <path d="M 1186 36 L 1186 14 L 1164 14" fill="none" stroke="#00f5ff" stroke-width="3"/>
+  <path d="M 14 324 L 14 346 L 36 346" fill="none" stroke="#a855f7" stroke-width="3"/>
+  <path d="M 1186 324 L 1186 346 L 1164 346" fill="none" stroke="#ec4899" stroke-width="3"/>
 
-  <!-- Cyber Grid Pattern Overlay -->
-  <rect width="1200" height="340" rx="16" fill="url(#cyber-grid)"/>
-
-  <!-- Procedural Maze / Circuit Visual Graphic Elements on Right -->
-  <g opacity="0.4" transform="translate(760, 25)">
-    <!-- Procedural Maze Lines -->
-    <path d="M 50 40 L 120 40 L 120 110 L 200 110 L 200 60 L 320 60 L 320 180 L 240 180 L 240 240 L 370 240" fill="none" stroke="#38bdf8" stroke-width="2.5" stroke-dasharray="6 4"/>
-    <path d="M 80 140 L 80 200 L 170 200 L 170 270 L 290 270" fill="none" stroke="#818cf8" stroke-width="2.5"/>
-    <path d="M 140 30 L 140 80 L 260 80 L 260 140 L 350 140" fill="none" stroke="#c084fc" stroke-width="2" stroke-dasharray="4 4"/>
+  <!-- Top Status Bar in HUD -->
+  <g transform="translate(48, 28)" class="font-hud">
+    <!-- Blinking REC / ONLINE status -->
+    <circle cx="6" cy="6" r="4.5" fill="#10b981" filter="url(#bloom)"/>
+    <text x="18" y="10" class="player-tag">SYS_ONLINE // LVL.99 GAME ARCHITECT</text>
     
-    <!-- Isometric Cube / Game Engine Nodes -->
-    <g transform="translate(260, 90)">
-      <polygon points="40,0 80,22 40,44 0,22" fill="#38bdf8" fill-opacity="0.3" stroke="#38bdf8" stroke-width="1.5"/>
-      <polygon points="0,22 40,44 40,90 0,68" fill="#1e293b" fill-opacity="0.6" stroke="#38bdf8" stroke-width="1.5"/>
-      <polygon points="40,44 80,22 80,68 40,90" fill="#0ea5e9" fill-opacity="0.4" stroke="#38bdf8" stroke-width="1.5"/>
-    </g>
-    <g transform="translate(130, 160)">
-      <polygon points="30,0 60,16 30,32 0,16" fill="#c084fc" fill-opacity="0.3" stroke="#c084fc" stroke-width="1.5"/>
-      <polygon points="0,16 30,32 30,66 0,50" fill="#1e293b" fill-opacity="0.6" stroke="#c084fc" stroke-width="1.5"/>
-      <polygon points="30,32 60,16 60,50 30,66" fill="#a855f7" fill-opacity="0.4" stroke="#c084fc" stroke-width="1.5"/>
-    </g>
-    <circle cx="120" cy="40" r="4.5" fill="#38bdf8" filter="url(#glow)"/>
-    <circle cx="200" cy="110" r="4.5" fill="#818cf8" filter="url(#glow)"/>
-    <circle cx="320" cy="180" r="4.5" fill="#c084fc" filter="url(#glow)"/>
-    <circle cx="170" cy="200" r="4.5" fill="#38bdf8" filter="url(#glow)"/>
+    <!-- Top Right Telemetry in HUD -->
+    <text x="1090" y="10" text-anchor="end" class="telemetry">FPS: 144 | DRAW_CALLS: 32 | ENGINE: UNITY 2021+ LTS</text>
   </g>
 
-  <!-- Left Content Wrapper -->
-  <g transform="translate(70, 52)">
+  <!-- Left Hero Content -->
+  <g transform="translate(48, 62)">
     
-    <!-- Top Pill / Role Badge -->
+    <!-- Role Badge -->
     <g transform="translate(0, 0)">
-      <rect width="365" height="32" rx="16" fill="url(#badge-grad)" opacity="0.25"/>
-      <rect width="365" height="32" rx="16" fill="none" stroke="url(#badge-grad)" stroke-width="1.2"/>
-      <circle cx="16" cy="16" r="5" fill="#10b981" filter="url(#glow)"/>
-      <text x="32" y="21" class="badge-text">UNITY GAME DEV &amp; SYSTEMS ARCHITECT</text>
-    </g>
-
-    <!-- Main Title (Name) -->
-    <text x="0" y="94" class="title" fill="url(#text-grad)">HOJJAT SHAFIEE</text>
-
-    <!-- Subtitle / Mission Statement -->
-    <text x="0" y="138" class="subtitle">
-      Crafting <tspan fill="#38bdf8" font-weight="600">Procedural Worlds</tspan>, Engaging Gameplay &amp; <tspan fill="#c084fc" font-weight="600">Autonomous AI Tools</tspan>
-    </text>
-
-    <!-- Tech Stack Tag Badges -->
-    <g transform="translate(0, 175)">
-      <!-- Tag 1: Unity -->
-      <g transform="translate(0, 0)">
-        <rect width="90" height="28" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1"/>
-        <text x="45" y="19" text-anchor="middle" class="tech-pill" fill="#f8fafc">Unity 3D</text>
-      </g>
-      <!-- Tag 2: C# -->
-      <g transform="translate(100, 0)">
-        <rect width="60" height="28" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1"/>
-        <text x="30" y="19" text-anchor="middle" class="tech-pill" fill="#38bdf8">C#</text>
-      </g>
-      <!-- Tag 3: Procedural -->
-      <g transform="translate(170, 0)">
-        <rect width="150" height="28" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1"/>
-        <text x="75" y="19" text-anchor="middle" class="tech-pill" fill="#a78bfa">Procedural Gen</text>
-      </g>
-      <!-- Tag 4: MCP / AI -->
-      <g transform="translate(330, 0)">
-        <rect width="125" height="28" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1"/>
-        <text x="62" y="19" text-anchor="middle" class="tech-pill" fill="#f472b6">AI &amp; MCP Tooling</text>
-      </g>
-      <!-- Tag 5: FastAPI -->
-      <g transform="translate(465, 0)">
-        <rect width="95" height="28" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1"/>
-        <text x="47" y="19" text-anchor="middle" class="tech-pill" fill="#34d399">FastAPI</text>
-      </g>
-      <!-- Tag 6: VoIP -->
-      <g transform="translate(570, 0)">
-        <rect width="115" height="28" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1"/>
-        <text x="57" y="19" text-anchor="middle" class="tech-pill" fill="#fb923c">Mumble VoIP</text>
-      </g>
-    </g>
-
-    <!-- Location & Status line -->
-    <g transform="translate(0, 230)">
-      <circle cx="6" cy="5" r="4" fill="#38bdf8"/>
-      <text x="20" y="9" class="meta-text">
-        Isfahan, Iran  •  Active on <tspan fill="#f472b6" font-weight="600">itch.io</tspan> &amp; Game Jams  •  Open to Work
+      <rect width="390" height="28" rx="6" fill="#0f172a" stroke="#00f5ff" stroke-width="1.2" stroke-opacity="0.8"/>
+      <circle cx="14" cy="14" r="4" fill="#00f5ff" filter="url(#bloom)"/>
+      <text x="28" y="18" class="font-hud" font-size="11" font-weight="700" fill="#00f5ff" letter-spacing="1.5px">
+        🎮 GAMEPLAY ARCHITECT &amp; PROCEDURAL DEV
       </text>
     </g>
 
+    <!-- Player Name (Cyberpunk Neon) -->
+    <text x="0" y="78" class="font-sans title-main" fill="url(#neon-cyan)">HOJJAT SHAFIEE</text>
+
+    <!-- Subtitle / Mission -->
+    <text x="0" y="116" class="font-sans subtitle-txt">
+      Synthesizing <tspan fill="#00f5ff" font-weight="700">Procedural Worlds</tspan>, High-Perf Systems &amp; <tspan fill="#c084fc" font-weight="700">Autonomous AI Agents</tspan>
+    </text>
+
+    <!-- HUD Health / Mana / Exp Bars -->
+    <g transform="translate(0, 142)" class="font-hud">
+      <!-- HP Bar -->
+      <g transform="translate(0, 0)">
+        <text x="0" y="11" class="hud-label">HP</text>
+        <rect x="36" y="2" width="180" height="11" rx="3" fill="#1e293b"/>
+        <rect x="36" y="2" width="180" height="11" rx="3" fill="url(#hp-grad)"/>
+        <text x="226" y="11" class="hud-val">100/100 (Coffee Stamina)</text>
+      </g>
+      <!-- MP Bar -->
+      <g transform="translate(0, 20)">
+        <text x="0" y="11" class="hud-label">MP</text>
+        <rect x="36" y="2" width="180" height="11" rx="3" fill="#1e293b"/>
+        <rect x="36" y="2" width="165" height="11" rx="3" fill="url(#mp-grad)"/>
+        <text x="226" y="11" class="hud-val">92/100 (Procedural Math)</text>
+      </g>
+      <!-- EXP Bar -->
+      <g transform="translate(0, 40)">
+        <text x="0" y="11" class="hud-label">EXP</text>
+        <rect x="36" y="2" width="180" height="11" rx="3" fill="#1e293b"/>
+        <rect x="36" y="2" width="176" height="11" rx="3" fill="url(#neon-pink)"/>
+        <text x="226" y="11" class="hud-val">98% (1,400+ Lifetime Commits)</text>
+      </g>
+    </g>
+
+    <!-- Weapon Stack Tags (Pills) -->
+    <g transform="translate(0, 218)" class="font-hud">
+      <!-- Tag 1 -->
+      <g transform="translate(0, 0)">
+        <rect width="90" height="26" rx="5" fill="#0f172a" stroke="#38bdf8" stroke-width="1"/>
+        <text x="45" y="17" text-anchor="middle" class="pill-txt" fill="#38bdf8">Unity 3D</text>
+      </g>
+      <!-- Tag 2 -->
+      <g transform="translate(98, 0)">
+        <rect width="60" height="26" rx="5" fill="#0f172a" stroke="#818cf8" stroke-width="1"/>
+        <text x="30" y="17" text-anchor="middle" class="pill-txt" fill="#818cf8">C#</text>
+      </g>
+      <!-- Tag 3 -->
+      <g transform="translate(166, 0)">
+        <rect width="140" height="26" rx="5" fill="#0f172a" stroke="#c084fc" stroke-width="1"/>
+        <text x="70" y="17" text-anchor="middle" class="pill-txt" fill="#c084fc">Procedural Mesh</text>
+      </g>
+      <!-- Tag 4 -->
+      <g transform="translate(314, 0)">
+        <rect width="120" height="26" rx="5" fill="#0f172a" stroke="#f43f5e" stroke-width="1"/>
+        <text x="60" y="17" text-anchor="middle" class="pill-txt" fill="#f43f5e">MCP Protocol</text>
+      </g>
+      <!-- Tag 5 -->
+      <g transform="translate(442, 0)">
+        <rect width="90" height="26" rx="5" fill="#0f172a" stroke="#10b981" stroke-width="1"/>
+        <text x="45" y="17" text-anchor="middle" class="pill-txt" fill="#10b981">FastAPI</text>
+      </g>
+      <!-- Tag 6 -->
+      <g transform="translate(540, 0)">
+        <rect width="110" height="26" rx="5" fill="#0f172a" stroke="#fb923c" stroke-width="1"/>
+        <text x="55" y="17" text-anchor="middle" class="pill-txt" fill="#fb923c">Mumble Murmur</text>
+      </g>
+    </g>
+
   </g>
 
-  <!-- Bottom Accent Border Line with Gradient Glow -->
-  <rect x="0" y="336" width="1200" height="4" fill="url(#border-glow)"/>
+  <!-- Right Visual Graphics: Retro Game Controller & Procedural Mesh HUD -->
+  <g transform="translate(770, 48)">
+    
+    <!-- Wireframe Isometric Cube (Procedural Mesh Engine) -->
+    <g transform="translate(180, 20)">
+      <!-- Top Face -->
+      <polygon points="60,0 120,32 60,64 0,32" fill="#00f5ff" fill-opacity="0.15" stroke="#00f5ff" stroke-width="1.8"/>
+      <!-- Left Face -->
+      <polygon points="0,32 60,64 60,130 0,98" fill="#1e293b" fill-opacity="0.5" stroke="#00f5ff" stroke-width="1.8"/>
+      <!-- Right Face -->
+      <polygon points="60,64 120,32 120,98 60,130" fill="#0284c7" fill-opacity="0.3" stroke="#00f5ff" stroke-width="1.8"/>
+      
+      <!-- Internal Vertex Points -->
+      <circle cx="60" cy="0" r="4" fill="#00f5ff" filter="url(#bloom)"/>
+      <circle cx="120" cy="32" r="4" fill="#38bdf8" filter="url(#bloom)"/>
+      <circle cx="0" cy="32" r="4" fill="#818cf8" filter="url(#bloom)"/>
+      <circle cx="60" cy="64" r="5" fill="#c084fc" filter="url(#bloom)"/>
+      <circle cx="60" cy="130" r="4" fill="#00f5ff" filter="url(#bloom)"/>
+      <circle cx="0" cy="98" r="3.5" fill="#a855f7"/>
+      <circle cx="120" cy="98" r="3.5" fill="#38bdf8"/>
+    </g>
+
+    <!-- Retro Gamepad Vector Silhouette -->
+    <g transform="translate(20, 130)">
+      <!-- Gamepad Body -->
+      <path d="M 40 40 C 20 50, 0 80, 10 120 C 18 150, 45 155, 65 130 L 95 105 L 145 105 L 175 130 C 195 155, 222 150, 230 120 C 240 80, 220 50, 200 40 C 175 28, 65 28, 40 40 Z" 
+            fill="#0b1329" stroke="#38bdf8" stroke-width="2" stroke-opacity="0.9"/>
+      
+      <!-- D-Pad (Left) -->
+      <g transform="translate(52, 65)">
+        <rect x="10" y="0" width="10" height="30" rx="2" fill="#1e293b" stroke="#00f5ff" stroke-width="1"/>
+        <rect x="0" y="10" width="30" height="10" rx="2" fill="#1e293b" stroke="#00f5ff" stroke-width="1"/>
+        <circle cx="15" cy="15" r="3" fill="#00f5ff"/>
+      </g>
+
+      <!-- Action Buttons (Right: X, Y, A, B) -->
+      <g transform="translate(162, 65)">
+        <!-- Top (Y) -->
+        <circle cx="15" cy="4" r="5" fill="#0f172a" stroke="#eab308" stroke-width="1.5"/>
+        <text x="15" y="7" text-anchor="middle" font-family="sans-serif" font-size="7" font-weight="900" fill="#eab308">Y</text>
+        <!-- Left (X) -->
+        <circle cx="4" cy="15" r="5" fill="#0f172a" stroke="#3b82f6" stroke-width="1.5"/>
+        <text x="4" y="18" text-anchor="middle" font-family="sans-serif" font-size="7" font-weight="900" fill="#3b82f6">X</text>
+        <!-- Right (B) -->
+        <circle cx="26" cy="15" r="5" fill="#0f172a" stroke="#ef4444" stroke-width="1.5"/>
+        <text x="26" y="18" text-anchor="middle" font-family="sans-serif" font-size="7" font-weight="900" fill="#ef4444">B</text>
+        <!-- Bottom (A) -->
+        <circle cx="15" cy="26" r="5" fill="#0f172a" stroke="#22c55e" stroke-width="1.5"/>
+        <text x="15" y="29" text-anchor="middle" font-family="sans-serif" font-size="7" font-weight="900" fill="#22c55e">A</text>
+      </g>
+
+      <!-- Middle Select / Start / Home -->
+      <rect x="100" y="74" width="14" height="5" rx="2" fill="#64748b"/>
+      <rect x="126" y="74" width="14" height="5" rx="2" fill="#64748b"/>
+      <circle cx="120" cy="90" r="5" fill="#00f5ff" filter="url(#bloom)"/>
+    </g>
+
+    <!-- Mini Telemetry Readout Box -->
+    <g transform="translate(20, 246)" class="font-hud">
+      <rect width="320" height="36" rx="6" fill="#020617" stroke="#1e293b" stroke-width="1"/>
+      <text x="12" y="16" class="telemetry">QUEST: LEVELING UP REPOSITORIES</text>
+      <text x="12" y="28" font-size="9" fill="#64748b">STATUS: 🟢 OPEN TO WORK [FULL-TIME / CONTRACT]</text>
+    </g>
+
+  </g>
+
+  <!-- Scanlines Effect Filter Overlay -->
+  <rect width="1200" height="360" rx="16" fill="url(#scanlines)" pointer-events="none"/>
+
+  <!-- Glowing Bottom Line -->
+  <rect x="0" y="356" width="1200" height="4" fill="url(#hud-line)"/>
 </svg>
