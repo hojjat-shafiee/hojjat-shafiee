@@ -11,6 +11,7 @@ export default function MiniArcade({ isSickoMode }) {
   const [highScore, setHighScore] = useState(0);
   const highScoreRef = useRef(0);
   const resetFlagRef = useRef(false);
+  const hasInteractedRef = useRef(false);
 
   useEffect(() => {
     gameStateRef.current = gameState;
@@ -71,15 +72,22 @@ export default function MiniArcade({ isSickoMode }) {
       const activeTag = document.activeElement?.tagName;
       if (['INPUT', 'TEXTAREA', 'SELECT'].includes(activeTag)) return;
 
-      if (e.code === 'Space' || e.code === 'ArrowUp' || e.code === 'KeyW') {
+      const isSpace = e.code === 'Space' || e.key === ' ' || e.key === 'Spacebar' || e.keyCode === 32;
+      const isUp = e.code === 'ArrowUp' || e.key === 'ArrowUp' || e.code === 'KeyW' || e.key === 'w' || e.key === 'W';
+
+      if (isSpace || isUp) {
         const isPlaying = gameStateRef.current === 'playing';
         const isArcadeFocused = containerRef.current?.contains(document.activeElement);
+        const rect = containerRef.current?.getBoundingClientRect();
+        const isArcadeVisible = Boolean(rect && rect.top < window.innerHeight && rect.bottom > 0);
 
         if (isPlaying) {
           e.preventDefault();
+          e.stopPropagation();
           jump();
-        } else if (isArcadeFocused) {
+        } else if (isArcadeFocused || (hasInteractedRef.current && isArcadeVisible)) {
           e.preventDefault();
+          e.stopPropagation();
           soundEngine.playConfirm();
           resetGame();
           gameStateRef.current = 'playing';
@@ -88,7 +96,7 @@ export default function MiniArcade({ isSickoMode }) {
       }
     };
 
-    window.addEventListener('keydown', handleKeyDown);
+    window.addEventListener('keydown', handleKeyDown, { capture: true });
 
     function spawnObstacle() {
       const type = Math.random() > 0.4 ? 'spike' : 'drone';
@@ -251,23 +259,25 @@ export default function MiniArcade({ isSickoMode }) {
 
     return () => {
       cancelAnimationFrame(animationId);
-      window.removeEventListener('keydown', handleKeyDown);
+      window.removeEventListener('keydown', handleKeyDown, { capture: true });
     };
   }, [isSickoMode]);
 
   const handleStartGame = (e) => {
     e?.stopPropagation();
+    hasInteractedRef.current = true;
     soundEngine.playConfirm();
     resetFlagRef.current = true;
     gameStateRef.current = 'playing';
     setGameState('playing');
-    containerRef.current?.focus();
+    containerRef.current?.focus({ preventScroll: true });
   };
 
   const handleCanvasClick = () => {
-    containerRef.current?.focus();
+    hasInteractedRef.current = true;
+    containerRef.current?.focus({ preventScroll: true });
     if (gameStateRef.current === 'playing') {
-      const event = new KeyboardEvent('keydown', { code: 'Space' });
+      const event = new KeyboardEvent('keydown', { code: 'Space', key: ' ' });
       window.dispatchEvent(event);
     } else {
       handleStartGame();
@@ -278,6 +288,9 @@ export default function MiniArcade({ isSickoMode }) {
     <div
       ref={containerRef}
       tabIndex={0}
+      onMouseDown={() => {
+        hasInteractedRef.current = true;
+      }}
       className="relative hud-panel rounded-lg p-5 border border-purple-500/30 overflow-hidden focus:outline-none focus:border-cyan-400"
     >
       <div className="flex flex-wrap items-center justify-between gap-4 mb-3 border-b border-purple-500/20 pb-3">
