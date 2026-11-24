@@ -1,12 +1,24 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { soundEngine } from '../utils/audio';
-import { Play, RotateCcw, Trophy, Volume2, Gamepad2, ExternalLink } from 'lucide-react';
+import { Play, RotateCcw, Trophy, Gamepad2, ExternalLink } from 'lucide-react';
 
 export default function MiniArcade({ isSickoMode }) {
   const canvasRef = useRef(null);
+  const containerRef = useRef(null);
   const [gameState, setGameState] = useState('idle'); // 'idle' | 'playing' | 'gameover'
+  const gameStateRef = useRef('idle');
   const [score, setScore] = useState(0);
   const [highScore, setHighScore] = useState(0);
+  const highScoreRef = useRef(0);
+  const resetFlagRef = useRef(false);
+
+  useEffect(() => {
+    gameStateRef.current = gameState;
+  }, [gameState]);
+
+  useEffect(() => {
+    highScoreRef.current = highScore;
+  }, [highScore]);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -14,27 +26,23 @@ export default function MiniArcade({ isSickoMode }) {
     const ctx = canvas.getContext('2d');
     let animationId;
 
-    // Dimensions
     const width = canvas.width = 640;
     const height = canvas.height = 240;
 
     let currentScore = 0;
     let frames = 0;
-    let gameSpeed = 4.5;
+    let gameSpeed = isSickoMode ? 6.0 : 4.5;
 
-    // Player state
     const player = {
       x: 60,
-      y: height - 50,
+      y: height - 54,
       w: 26,
       h: 34,
       vy: 0,
       gravity: 0.75,
       isGrounded: true,
-      color: isSickoMode ? '#f43f5e' : '#00f5ff'
     };
 
-    // Obstacles and Collectibles
     let obstacles = [];
     let particles = [];
 
@@ -42,7 +50,7 @@ export default function MiniArcade({ isSickoMode }) {
       currentScore = 0;
       frames = 0;
       gameSpeed = isSickoMode ? 6.0 : 4.5;
-      player.y = height - 50;
+      player.y = height - 54;
       player.vy = 0;
       player.isGrounded = true;
       obstacles = [];
@@ -59,14 +67,23 @@ export default function MiniArcade({ isSickoMode }) {
     }
 
     const handleKeyDown = (e) => {
+      // Never intercept keys while typing in inputs, textareas, or terminal
+      const activeTag = document.activeElement?.tagName;
+      if (['INPUT', 'TEXTAREA', 'SELECT'].includes(activeTag)) return;
+
       if (e.code === 'Space' || e.code === 'ArrowUp' || e.code === 'KeyW') {
-        e.preventDefault();
-        if (gameState !== 'playing') {
-          soundEngine.playConfirm();
-          setGameState('playing');
-          resetGame();
-        } else {
+        const isPlaying = gameStateRef.current === 'playing';
+        const isArcadeFocused = containerRef.current?.contains(document.activeElement);
+
+        if (isPlaying) {
+          e.preventDefault();
           jump();
+        } else if (isArcadeFocused) {
+          e.preventDefault();
+          soundEngine.playConfirm();
+          resetGame();
+          gameStateRef.current = 'playing';
+          setGameState('playing');
         }
       }
     };
@@ -80,7 +97,7 @@ export default function MiniArcade({ isSickoMode }) {
         y: type === 'spike' ? height - 42 : height - 75,
         w: type === 'spike' ? 20 : 26,
         h: type === 'spike' ? 32 : 22,
-        type: type,
+        type,
         color: isSickoMode ? '#a855f7' : '#ec4899'
       });
     }
@@ -99,6 +116,11 @@ export default function MiniArcade({ isSickoMode }) {
     }
 
     const loop = () => {
+      if (resetFlagRef.current) {
+        resetGame();
+        resetFlagRef.current = false;
+      }
+
       ctx.clearRect(0, 0, width, height);
 
       // Background Cyber Grid Horizon
@@ -130,15 +152,17 @@ export default function MiniArcade({ isSickoMode }) {
         ctx.stroke();
       }
 
-      if (gameState === 'playing') {
+      if (gameStateRef.current === 'playing') {
         frames++;
         if (frames % 10 === 0) {
           currentScore++;
           setScore(currentScore);
-          if (currentScore > highScore) setHighScore(currentScore);
+          if (currentScore > highScoreRef.current) {
+            highScoreRef.current = currentScore;
+            setHighScore(currentScore);
+          }
         }
 
-        // Increase speed gradually
         if (frames % 400 === 0) {
           gameSpeed += 0.35;
         }
@@ -162,7 +186,6 @@ export default function MiniArcade({ isSickoMode }) {
           const obs = obstacles[i];
           obs.x -= gameSpeed;
 
-          // Draw obstacle
           ctx.fillStyle = obs.color;
           ctx.shadowColor = obs.color;
           ctx.shadowBlur = 10;
@@ -175,13 +198,11 @@ export default function MiniArcade({ isSickoMode }) {
             ctx.fill();
           } else {
             ctx.fillRect(obs.x, obs.y, obs.w, obs.h);
-            // Drone blinking red dot
             ctx.fillStyle = '#ffffff';
             ctx.fillRect(obs.x + 4, obs.y + 4, 4, 4);
           }
           ctx.shadowBlur = 0;
 
-          // Collision detection AABB
           if (
             player.x < obs.x + obs.w &&
             player.x + player.w > obs.x &&
@@ -190,16 +211,15 @@ export default function MiniArcade({ isSickoMode }) {
           ) {
             soundEngine.playGlitch();
             addParticles(player.x + player.w / 2, player.y + player.h / 2, '#f43f5e');
+            gameStateRef.current = 'gameover';
             setGameState('gameover');
           }
 
-          // Remove offscreen
           if (obs.x + obs.w < -10) {
             obstacles.splice(i, 1);
           }
         }
 
-        // Particles update
         for (let i = particles.length - 1; i >= 0; i--) {
           const p = particles[i];
           p.x += p.vx;
@@ -211,16 +231,13 @@ export default function MiniArcade({ isSickoMode }) {
         }
       }
 
-      // Draw Player (Cyber Runner / Dino avatar)
+      // Draw Player
       ctx.fillStyle = isSickoMode ? '#f43f5e' : '#00f5ff';
       ctx.shadowColor = ctx.fillStyle;
       ctx.shadowBlur = 12;
-      // Body
       ctx.fillRect(player.x, player.y, player.w, player.h);
-      // Cyber visor / eye
       ctx.fillStyle = '#ffffff';
       ctx.fillRect(player.x + player.w - 8, player.y + 6, 6, 4);
-      // Jetpack flame if jumping
       if (!player.isGrounded) {
         ctx.fillStyle = '#f59e0b';
         ctx.fillRect(player.x - 6, player.y + player.h - 10, 6, 8 + Math.random() * 6);
@@ -236,28 +253,33 @@ export default function MiniArcade({ isSickoMode }) {
       cancelAnimationFrame(animationId);
       window.removeEventListener('keydown', handleKeyDown);
     };
-  }, [gameState, isSickoMode, highScore]);
+  }, [isSickoMode]);
 
-  const handleStartGame = () => {
+  const handleStartGame = (e) => {
+    e?.stopPropagation();
     soundEngine.playConfirm();
+    resetFlagRef.current = true;
+    gameStateRef.current = 'playing';
     setGameState('playing');
+    containerRef.current?.focus();
   };
 
   const handleCanvasClick = () => {
-    if (gameState === 'playing') {
-      // Simulate jump on tap/click for mobile & desktop
-      const canvas = canvasRef.current;
-      if (canvas) {
-        const event = new KeyboardEvent('keydown', { code: 'Space' });
-        window.dispatchEvent(event);
-      }
+    containerRef.current?.focus();
+    if (gameStateRef.current === 'playing') {
+      const event = new KeyboardEvent('keydown', { code: 'Space' });
+      window.dispatchEvent(event);
     } else {
       handleStartGame();
     }
   };
 
   return (
-    <div className="relative hud-panel rounded-lg p-5 border border-purple-500/30 overflow-hidden">
+    <div
+      ref={containerRef}
+      tabIndex={0}
+      className="relative hud-panel rounded-lg p-5 border border-purple-500/30 overflow-hidden focus:outline-none focus:border-cyan-400"
+    >
       <div className="flex flex-wrap items-center justify-between gap-4 mb-3 border-b border-purple-500/20 pb-3">
         <div className="flex items-center gap-2.5">
           <Gamepad2 className="w-5 h-5 text-purple-400 animate-pulse" />
@@ -302,7 +324,7 @@ export default function MiniArcade({ isSickoMode }) {
           >
             {gameState === 'gameover' ? (
               <>
-                <span className="text-rose-500 font-orbitron text-xl font-bold tracking-widest animate-bounce">
+                <span className="text-rose-500 font-orbitron text-xl font-bold tracking-widest animate-bounce text-center px-2">
                   SYSTEM FAILURE // CRASH DETECTED
                 </span>
                 <span className="text-xs text-slate-400 font-mono">
@@ -321,7 +343,7 @@ export default function MiniArcade({ isSickoMode }) {
                 <span className="text-cyan-400 font-orbitron text-lg font-bold tracking-widest">
                   CYBER DINO ARCADE
                 </span>
-                <p className="text-xs text-slate-400 font-mono max-w-sm text-center">
+                <p className="text-xs text-slate-400 font-mono max-w-sm text-center px-3">
                   Press <b>[SPACE]</b>, <b>[W]</b>, or <b>CLICK</b> to jump and dodge corrupted drones. Built in honor of Hojjat's Unity Dino clone.
                 </p>
                 <button

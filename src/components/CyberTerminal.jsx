@@ -23,26 +23,23 @@ export default function CyberTerminal({ isOpen, onClose, onToggleSickoMode, isSi
     bottomRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [history]);
 
-  const handleCommand = (e) => {
-    if (e.key === 'Enter') {
-      e.preventDefault();
-      const trimmed = inputVal.trim();
-      if (!trimmed) return;
+  const executeCommand = () => {
+    const trimmed = inputVal.trim();
+    if (!trimmed) return;
 
-      soundEngine.playTerminalKey();
-      const newHistory = [...history, { text: `user@hojjat-shafiee:~$ ${trimmed}`, type: 'user' }];
-      const cmd = trimmed.toLowerCase();
+    soundEngine.playTerminalKey();
+    const newHistory = [...history, { text: `user@hojjat-shafiee:~$ ${trimmed}`, type: 'user' }];
+    const cmd = trimmed.toLowerCase();
 
-      // Add to command history
-      setCmdHistory(prev => [...prev, trimmed]);
-      setCmdIndex(-1);
-      setInputVal('');
+    setCmdHistory(prev => [...prev, trimmed]);
+    setCmdIndex(-1);
+    setInputVal('');
 
-      switch (cmd) {
-        case 'help':
-          newHistory.push({
-            type: 'output',
-            text: `AVAILABLE DIRECTIVES:
+    switch (cmd) {
+      case 'help':
+        newHistory.push({
+          type: 'output',
+          text: `AVAILABLE DIRECTIVES:
   about       - Character background, 10+ yrs game dev & systems background
   skills      - Armory weapon loadout (Unity, HLSL, Python, MCP, VoIP)
   projects    - Active repositories & quest portfolio
@@ -51,48 +48,48 @@ export default function CyberTerminal({ isOpen, onClose, onToggleSickoMode, isSi
   contact     - ProtonMail transmission channel & social links
   clear       - Purge terminal buffer
   exit        - Terminate terminal session`
-          });
-          break;
+        });
+        break;
 
-        case 'about':
-          newHistory.push({
-            type: 'output',
-            text: `[HOJJAT SHAFIEE // GAMEPLAY ARCHITECT & PROCEDURAL DEV]
+      case 'about':
+        newHistory.push({
+          type: 'output',
+          text: `[HOJJAT SHAFIEE // GAMEPLAY ARCHITECT & PROCEDURAL DEV]
 Level 99 Engineer based in Isfahan, Iran.
 10+ years dedicated to crafting procedural worlds, custom HLSL shaders,
 thread-safe game architectures, low-latency spatial VoIP (Mumble),
 and modern Model Context Protocol (MCP) integrations for AI agents.`
-          });
-          break;
+        });
+        break;
 
-        case 'skills':
-          newHistory.push({
-            type: 'output',
-            text: `[EQUIPPED WEAPON LOADOUT]
+      case 'skills':
+        newHistory.push({
+          type: 'output',
+          text: `[EQUIPPED WEAPON LOADOUT]
 • Primary Weapon: Unity Engine 6 / LTS, C#, HLSL / ShaderLab
 • Systems & Network: Python 3.12, FastAPI Async, ZeroC ICE, Mumble VoIP
 • Procedural Engine: Noise Synthesis, Dynamic Heightmaps, 3D Maze Algorithms
 • AI Protocols: Model Context Protocol (MCP), Live Unity Editor Agent Control`
-          });
-          break;
+        });
+        break;
 
-        case 'projects':
-          newHistory.push({
-            type: 'output',
-            text: `[ACTIVE QUEST LOG]
+      case 'projects':
+        newHistory.push({
+          type: 'output',
+          text: `[ACTIVE QUEST LOG]
 1. 3d-Maze-Generator    - Procedural 3D labyrinth runner (Unity C#)
 2. figma-mcp-browser    - Model Context Protocol server for Figma assets
 3. mumble-server-rest-api - High-throughput async Mumble REST backend
 4. Tidebreak            - GitHub Game Off 2025 fluid wave mechanics
 5. TerrainGenerator     - Procedural heightmap landscape synthesizer
 6. qoder-unity-mcp      - MCP server for AI agent control in Unity Editor`
-          });
-          break;
+        });
+        break;
 
-        case 'stats':
-          newHistory.push({
-            type: 'output',
-            text: `[ATTRIBUTES & TELEMETRY]
+      case 'stats':
+        newHistory.push({
+          type: 'output',
+          text: `[ATTRIBUTES & TELEMETRY]
 HP:   100/100 (Deep debugging stamina & caffeine tolerance)
 MANA: 92/100  (Procedural algorithms & dynamic mesh synthesis)
 EXP:  98%     (1,400+ Lifetime contributions, Level 99)
@@ -100,48 +97,53 @@ STR:  99/99   [Unity Engine / C# Architecture]
 INT:  95/99   [Procedural Algorithms & Heightmaps]
 DEX:  94/99   [Multithreading & Low Latency VoIP]
 CHA:  90/99   [Multiplayer Co-op & Open to Work]`
-          });
-          break;
+        });
+        break;
 
-        case 'sikomode':
-          onToggleSickoMode();
-          newHistory.push({
-            type: 'success',
-            text: isSickoMode 
-              ? '>> OVERDRIVE DISENGAGED. RETURNING TO NOMINAL HUD STATUS.'
-              : '>> SICKO MODE ACTIVATED! OVERCLOCKING FREQUENCY TO 5.4 GHZ!'
-          });
-          break;
+      case 'sikomode':
+        onToggleSickoMode();
+        newHistory.push({
+          type: 'success',
+          text: isSickoMode 
+            ? '>> OVERDRIVE DISENGAGED. RETURNING TO NOMINAL HUD STATUS.'
+            : '>> SICKO MODE ACTIVATED! OVERCLOCKING FREQUENCY TO 5.4 GHZ!'
+        });
+        break;
 
-        case 'contact':
-          newHistory.push({
-            type: 'output',
-            text: `DIRECT TRANSMISSION CHANNELS:
+      case 'contact':
+        newHistory.push({
+          type: 'output',
+          text: `DIRECT TRANSMISSION CHANNELS:
 • ProtonMail: better_call_hojat@proton.me
 • itch.io:    https://hojjat-shafiee.itch.io
 • LinkedIn:   https://www.linkedin.com/in/hojjat-shafiee/
 • GitHub:     https://github.com/hojjat-shafiee`
-          });
-          break;
+        });
+        break;
 
-        case 'clear':
-          setHistory([]);
-          return;
+      case 'clear':
+        setHistory([]);
+        return;
 
-        case 'exit':
-          onClose();
-          return;
+      case 'exit':
+        onClose();
+        return;
 
-        default:
-          soundEngine.playGlitch();
-          newHistory.push({
-            type: 'error',
-            text: `bash: ${trimmed}: command not recognized. Execute 'help' for directory manifest.`
-          });
-          break;
-      }
+      default:
+        soundEngine.playGlitch();
+        newHistory.push({
+          type: 'error',
+          text: `bash: ${trimmed}: command not recognized. Execute 'help' for directory manifest.`
+        });
+        break;
+    }
 
-      setHistory(newHistory);
+    setHistory(newHistory);
+  };
+
+  const handleCommand = (e) => {
+    if (e.key === 'Enter') {
+      return;
     } else if (e.key === 'ArrowUp') {
       if (cmdHistory.length > 0) {
         const nextIdx = cmdIndex === -1 ? cmdHistory.length - 1 : Math.max(0, cmdIndex - 1);
@@ -221,7 +223,13 @@ CHA:  90/99   [Multiplayer Co-op & Open to Work]`
         </div>
 
         {/* Input Bar */}
-        <div className="flex items-center gap-2 px-4 py-2.5 bg-slate-900/90 border-t border-cyan-500/20">
+        <form
+          onSubmit={(e) => {
+            e.preventDefault();
+            executeCommand();
+          }}
+          className="flex items-center gap-2 px-4 py-2.5 bg-slate-900/90 border-t border-cyan-500/20"
+        >
           <span className="text-cyan-400 font-bold select-none text-xs">
             user@hojjat:~$
           </span>
@@ -236,12 +244,12 @@ CHA:  90/99   [Multiplayer Co-op & Open to Work]`
             autoFocus
           />
           <button
-            onClick={() => handleCommand({ key: 'Enter', preventDefault: () => {} })}
+            type="submit"
             className="text-cyan-400 hover:text-cyan-300 p-1"
           >
             <CornerDownLeft className="w-3.5 h-3.5" />
           </button>
-        </div>
+        </form>
 
         {/* Reticles */}
         <div className="corner-tl" />
