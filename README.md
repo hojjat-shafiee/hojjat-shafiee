@@ -26,6 +26,13 @@
 
   <br/><br/>
 
+  <!-- Sicko Mode Live Web Portfolio Badge -->
+  <a href="https://hojjat-shafiee.github.io/hojjat-shafiee/">
+    <img src="https://img.shields.io/badge/⚡%20SIKO%20MODE%20PORTFOLIO-LAUNCH%20LIVE%203D%20HUD-00f5ff?style=for-the-badge&logo=electron&logoColor=black" alt="Launch Live 3D Sicko Mode Portfolio" />
+  </a>
+
+  <br/><br/>
+
   <!-- Quick Action & Store Badges -->
   <a href="https://hojjat-shafiee.itch.io">
     <img src="https://img.shields.io/badge/itch.io-Play%20Games-FA5C5C?style=for-the-badge&logo=itchdotio&logoColor=white" alt="itch.io" />
